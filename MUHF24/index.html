@@ -576,7 +576,7 @@
         class="text-3xl font-bold text-center text-gray-800 mb-6"
         style="font-family: 'Macondo', cursive"
       >
-        The Team Behind MUHF-24
+         Team 
       </h1>
 
       <!-- Team section -->
@@ -584,8 +584,7 @@
         <div class="swiper mySwiperLeads container">
           <div class="swiper-wrapper content" id="leads"></div>
         </div>
-        <div class="swiper-button-next leads-next"></div>
-        <div class="swiper-button-prev leads-prev"></div>
+       
         <div class="swiper-pagination leads-pagination"></div>
       </section>
 
@@ -593,8 +592,7 @@
         <div class="swiper mySwiperMembers container">
           <div class="swiper-wrapper content" id="members"></div>
         </div>
-        <div class="swiper-button-next members-next"></div>
-        <div class="swiper-button-prev members-prev"></div>
+       
         <div class="swiper-pagination members-pagination"></div>
       </section>
     </div>
@@ -836,6 +834,10 @@
         spaceBetween: 30,
         slidesPerGroup: 1,
         loop: true,
+        autoplay: {
+    delay: 2500, // Adjust the delay (in ms) as needed
+    disableOnInteraction: false, // Keep autoplay active after user interaction
+  },
         pagination: {
           el: ".members-pagination",
           clickable: true,
@@ -857,7 +859,7 @@
           },
           // when window width is >= 640px
           640: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 30,
           },
         },
@@ -868,6 +870,10 @@
         spaceBetween: 30,
         slidesPerGroup: 1,
         loop: true,
+        autoplay: {
+    delay: 2500, // Adjust the delay (in ms) as needed
+    disableOnInteraction: false, // Keep autoplay active after user interaction
+  },
         pagination: {
           el: ".leads-pagination",
           clickable: true,
@@ -889,7 +895,7 @@
           },
           // when window width is >= 640px
           640: {
-            slidesPerView: 3,
+            slidesPerView:4,
             spaceBetween: 30,
           },
         },

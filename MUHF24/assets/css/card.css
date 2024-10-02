@@ -38,7 +38,7 @@ section .card .image img {
 .card::before {
   content: "";
   position: absolute;
-  height: 55%;
+  height: 30%;
   width: 100%;
   background: #7d2ae8;
   border-radius: 20px 20px 0 0;
@@ -109,7 +109,7 @@ section .card .image img {
     width: 100%;
   }
   .card::before {
-    height: 55%;
+    height: 30%;
     border-radius: 10px 10px 0 0;
   }
 }
@@ -117,7 +117,7 @@ section .card .image img {
 /* For mobile phones: */
 @media (max-width: 480px) {
   .card::before {
-    height: 45%;
+    height: 30%;
     border-radius: 10px 10px 0 0;
   }
 }
