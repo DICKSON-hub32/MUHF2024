@@ -529,3 +529,11 @@ body {
 #contact .fab:hover {
     color: #fff;
 }
+
+.img_cat{
+    object-fit:cover; 
+    height:10rem;
+    border-radius:20px;
+    width:10rem;
+    margin-right:5px
+}
