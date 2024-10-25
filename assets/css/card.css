@@ -18,7 +18,6 @@ section .card .image {
   width: 140px;
   border-radius: 50%;
   padding: 3px;
-  background: #7d2ae8;
 }
 section .card .image img {
   height: 100%;
@@ -39,9 +38,7 @@ section .card .image img {
 .card::before {
   content: "";
   position: absolute;
-  /* height: 30%; */
   width: 100%;
-  background: #7d2ae8;
   border-radius: 20px 20px 0 0;
   opacity: 0.6;
 }
@@ -58,7 +55,7 @@ section .card .image img {
 .card .media-icons {
   position: absolute;
   top: 120px;
-  right: 60px;
+  right: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
