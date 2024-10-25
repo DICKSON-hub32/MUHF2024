@@ -76,6 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateCountdown(); // initial call to display immediately
     }
 
-    const endDate = new Date('2024-10-15T09:00:00').getTime(); // Set your countdown end date
+    const endDate = new Date('2024-11-05T09:00:00').getTime(); // Set your countdown end date
     startCountdown(endDate);
 });
