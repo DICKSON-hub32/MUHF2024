@@ -292,16 +292,16 @@
             style="font-family: 'Macondo', cursive; color: #333">
             Categories
           </h1>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <li class="bg-white rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <i class="fas fa-water fa-3x text-blue-500 mb-3"></i>
+          <ul class=flex">
+            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+             <img  src='assets/images/categories/Water.png' class="img_cat" />
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Water
               </h2>
               <p class="text-gray-700 "  style="font-family: 'Montserrat', sans-serif;width:15rem">
                 Solutions for water conservation, purification, &amp; management.
               </p>
-            </div>
+            
             </li>
 
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
@@ -316,17 +316,7 @@
               </p>
             </div>
             </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Software.jpeg' class="img_cat" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Software
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Development of software applications that promote sustainability.
-              </p>
-            </div>
-            </li>
+           
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
               <img  src='assets/images/categories/agriculture.jpeg' class="img_cat" />
               <div>
@@ -374,6 +364,7 @@
             </div>
             </li>
           </ul>
+          </div>
         </div>
 
         <div class="container mx-auto px-4 py-12">
@@ -387,7 +378,7 @@
               <div class="swiper-wrapper content" id="leads"></div>
             </div>
 
-            <div class="swiper-pagination leads-pagination"></div>
+            <!-- <div class="swiper-pagination leads-pagination"></div> -->
           </section>
 
           <section class="justify-center items-center">
@@ -395,7 +386,7 @@
               <div class="swiper-wrapper content" id="members"></div>
             </div>
 
-            <div class="swiper-pagination members-pagination"></div>
+            <!-- <div class="swiper-pagination members-pagination"></div> -->
           </section>
         </div>
    <!-- Gallery -->
@@ -419,7 +410,7 @@
       </a>
       <!-- Day 3 -->
       <a href="https://photos.app.goo.gl/3Ka9esxJaw61rYXo8" class="block">
-        <img src="./assets/images/day3.JPG"  alt="Day 3" class="w-full h-auto rounded-lg">
+        <img src="./assets/images/day3.jpg"  alt="Day 3" class="w-full h-auto rounded-lg">
         <p></br><b>Day 3</b></p>
       </a>
     </div>
@@ -660,7 +651,7 @@
             loop: true,
             autoplay: {
               delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: false, // Keep autoplay active after user interaction
+              disableOnInteraction: true, // Keep autoplay active after user interaction
             },
             pagination: {
               el: ".members-pagination",
@@ -696,7 +687,7 @@
             loop: true,
             autoplay: {
               delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: false, // Keep autoplay active after user interaction
+              disableOnInteraction: true, // Keep autoplay active after user interaction
             },
             pagination: {
               el: ".leads-pagination",

@@ -56,7 +56,7 @@ export const leads = [
 export const members = [
   {
     name: "Anthony Marugu",
-    profession: "Operations Member",
+    profession: "Operations Team Member",
     src: "assets/images/team/ANTHONY.png",
     alt: "Anthony Marugu",
     facebook: "#",
@@ -66,7 +66,7 @@ export const members = [
   },
   {
     name: "Jairus Mariga",
-    profession: "Marketing Member",
+    profession: "Marketing Team Member",
     src: "assets/images/team/JAIRUS.jpg",
     alt: "Jairus Mariga",
     facebook: "#",
@@ -76,59 +76,59 @@ export const members = [
   },
   {
     name: "Salem Lumumba",
-    profession: "Marketing Member",
+    profession: "Marketing Team Member",
     src: "assets/images/team/SALEM.png",
     alt: "Salem Lumumba",
   },
 
   {
     name: "Eric Kaloki",
-    profession: "R & D Member",
+    profession: "R & D Team Member",
     src: "assets/images/team/erick.png",
     alt: "Eric Kaloki",
   },
   {
     name: "Anoid Mutunga",
-    profession: "R & D Member",
+    profession: "R & D Team Member",
     src: "assets/images/team/ANOID.png",
     alt: "Anoid Mutunga",
   },
   {
     name: "Henry Kimani",
-    profession: "R & D Member",
+    profession: "R & D Team Member",
     src: "assets/images/team/HENRY.png",
     alt: "Henry Kimani",
   },
   {
     name: "Augustine Mwai",
-    profession: "Logistics Member",
+    profession: "Logistics Team Member",
     src: "assets/images/team/MWAI.jpg",
     alt: "Augustine Mwai",
   },
   {
     name: "Brian Karanja",
-    profession: "Marketing Member",
+    profession: "Marketing Team Member",
     src: "assets/images/team/BRIAN.jpg",
     alt: "Brian Karanja",
   },
   {
     name: "Brian Kuria",
-    profession: "Logistics Member",
+    profession: "Logistics Team Member",
     src: "assets/images/team/MWANGI.jpg",
     alt: "Brian Kuria",
   },
   {
     name: "Peter Kinyua",
-    profession: "Logistics Member",
+    profession: "Logistics Team Member",
     src: "assets/images/team/PETER.jpg",
     alt: "Peter Kinyua",
   },
   {
     name: "Victor Mutiso",
-    profession: "Logistics Member",
+    profession: "Logistics Team Member",
     src: "assets/images/team/VICTOR.jpg",
     alt: "Victor Mutiso",
   },
 
-  // Add more members as needed
+  // Add more Team Members as needed
 ];

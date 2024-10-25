@@ -7,11 +7,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .swiper {
-  width: 950px;
+  width: 900px;
 }
 
 section .card .image {
@@ -24,7 +23,7 @@ section .card .image {
 section .card .image img {
   height: 100%;
   width: 100%;
-  object-fit: cover ;
+  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #fff;
 }
@@ -34,15 +33,17 @@ section .card .image img {
   background: #fff;
   border-radius: 20px;
   margin: 20px 0;
+  border: 2px solid #eee0ff;
 }
 
 .card::before {
   content: "";
   position: absolute;
-  height: 30%;
+  /* height: 30%; */
   width: 100%;
   background: #7d2ae8;
   border-radius: 20px 20px 0 0;
+  opacity: 0.6;
 }
 
 .card .card-content {
@@ -56,8 +57,8 @@ section .card .image img {
 
 .card .media-icons {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 120px;
+  right: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +70,8 @@ section .card .image img {
   margin-top: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
+  font-size: 40px;
+  color: rgb(0, 0, 184);
 }
 .card .media-icons i:hover {
   opacity: 1;
@@ -96,6 +99,7 @@ section .card .image img {
   width: 26px !important;
   border-radius: 25px !important;
   background: #7d2ae8 !important;
+  opacity: 0.6 !important;
 }
 @media (max-width: 768px) {
   section {
@@ -110,15 +114,30 @@ section .card .image img {
     width: 100%;
   }
   .card::before {
-    height: 30%;
     border-radius: 10px 10px 0 0;
+  }
+
+  .card .media-icons i {
+    opacity: 1;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(0, 0, 184);
   }
 }
 
 /* For mobile phones: */
 @media (max-width: 480px) {
   .card::before {
-    height: 30%;
     border-radius: 10px 10px 0 0;
+  }
+  .card .media-icons i {
+    opacity: 1;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(0, 0, 184);
   }
 }
