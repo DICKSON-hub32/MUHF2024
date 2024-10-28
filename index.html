@@ -29,6 +29,29 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+  
+     .lazy_load {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+        .lazy_load.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hideNavbar{
+          transform:translateX(-100%);
+          transition: all 0.3s ease-in-out;
+
+        }
+        .hideNavbar.showNavbar{
+          transform:translateX(0);
+          transition: all 0.3s ease-in-out;
+        }
+  </style>
+</style>
+
 </head>
 
 <body class="text-gray-800">
@@ -40,22 +63,18 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="bg-white shadow">
+  <nav class="bg-white shadow ">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <button type="button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="inline-flex items-center justify-center p-2 rounded-md text-blue-700 hover:text-blue-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
-            <span class="sr-only">Open main menu</span>
-            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
-            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+
           </button>
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
@@ -64,17 +83,17 @@
               <img src="assets/images/MUHF.png" alt="MKSU Hackfest" class="logo" />
             </a>
           </div>
-          <div class="hidden sm:block">
+          <div class="hidden sm:block " >
             <div class="flex space-x-4">
               <a href="#hero" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
               <a href="#about" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
               <a href="#agenda" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Agenda</a>
 
-              <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
+              <!-- <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
                 class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium" data-luma-action="checkout"
                 data-luma-event-id="evt-CAnPrpULOEUaWh2">
                 Register
-              </a>
+              </a> -->
 
               <a href="#categories" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Categories</a>
               <a href="#sponsors" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
@@ -85,30 +104,56 @@
       </div>
     </div>
 
-    <div class="hidden sm:hidden transition-height duration-300 ease-in-out" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#hero" class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">Home</a>
-        <a href="#about" class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">About</a>
-        <a href="#agenda" class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">Agenda</a>
+    <div  style=" background-color: rgba(255, 255, 255,0.7);width:50%; max-width:20rem ;color:white" class=" fixed inset-y-0 left-0 w-72  backdrop-blur-sm shadow-lg z-50 transform transition-all duration-300 sideBar hideNavbar">
+      <!-- Header -->
+      <div style="justify-content: space-between;" class="p-4 border-b border-gray-200 flex flex-column ">
+        <h2 class="text-xl font-semibold " style="color:rgb(9, 67, 124)">Menu</h2>
+         <button id="navbarClose" class="text-xl font-semibold text-white" style="background-color:rgb(9, 67, 124);border-radius:3px;padding:2px 8px 2px 8px;outline: none;">X</button>
 
-        <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
-          class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium" data-luma-action="checkout"
-          data-luma-event-id="evt-CAnPrpULOEUaWh2">
-          Register
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="px-2 pt-4 pb-3 space-y-1 ">
+        <a href="#hero" 
+        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+           class="block px-4 py-3 text-black rounded-lg  hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Home
         </a>
+        
+        <a href="#about" 
+          style="border-bottom:2px solid rgb(9, 67, 124);font-weight:200;font-size:18px;" 
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          About
+        </a>
+        
+        <a href="#agenda" 
+        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Agenda
+        </a>
+        
         <a href="#categories"
-          class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">Categories</a>
-        <a href="#sponsors"
-          class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">Sponsors</a>
-        <a href="#contact"
-          class="text-gray-900 block px-3 py-2 rounded-md text-base text-center font-medium">Contact</a>
+        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;" 
+           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Categories
+        </a>
+        <a href="#sponsors" 
+        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Sponsors
+        </a>
+        <a href="#contact" 
+        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Contact
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <div class="bg-cover bg-center h-screen text-white" style="background-image: url('assets/images/main.jpg')" id="hero">
-    <div class="h-full bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-cover bg-center h-screen text-white " style="background-image: url('assets/images/main.jpg')" id="hero">
+    <div class="h-full bg-black bg-opacity-50 flex items-center justify-center lazy_load">
       <div class="text-center">
         <h1 class="text-5xl font-bold animate__animated animate__fadeInDown" style="font-family: 'Macondo', cursive">
           Welcome to MksU Hackfest 2024
@@ -130,7 +175,7 @@
               <p class="mt-4 text-lg animate__animated animate__fadeInUp" style="font-family: 'Montserrat', sans-serif">
                 Join us for a 3-day event of innovation and creativity
               </p>
--->
+              -->
               <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
                 class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-bold animate__animated animate__fadeInUp hover:bg-blue-700 hover:animate__shakeX"
                 data-luma-action="checkout" data-luma-event-id="evt-CAnPrpULOEUaWh2">
@@ -141,6 +186,7 @@
             <!-- </div>
           </div>  -->
         <!-- </div> -->
+              <p class="slogan" style="font-family: pt mono;">Innovate , collaborate, empower</p>
       </div>
     </div>
   </div>
@@ -164,7 +210,7 @@
           </h1>
           <div class="md:flex md:justify-center md:items-center mb-8">
             <img src="assets/images/ADS_2157.jpg" alt="MksU Hackfest Image"
-              class="rounded-lg shadow-lg md:w-1/3 mb-6 md:mb-0" />
+              class="rounded-lg shadow-lg md:w-1/3 mb-6 md:mb-0 lazy_load" />
             <div class="md:w-2/3 md:ml-8">
               <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
                 The Machakos University (MksU) Tech and Engineering Community
@@ -206,7 +252,7 @@
                 </div>
                 <div class="timeline-content">
                   <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    15-10-2024 (Tuesday)
+                    5th November (Tuesday)
                   </h3>
                   <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
                     <li style="color: #fff">
@@ -232,7 +278,7 @@
                 </div>
                 <div class="timeline-content">
                   <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    16-10-2024 (Wednesday)
+                    6th November (Wednesday)
                   </h3>
                   <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
                     <li style="color: #fff">
@@ -254,7 +300,7 @@
                 </div>
                 <div class="timeline-content">
                   <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    18-10-2024 (Friday)
+                    7th November (Thursday)
                   </h3>
                   <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
                     <li style="color: #fff">Judging and awarding session</li>
@@ -269,7 +315,7 @@
           </div>
         </div>
 
-        <!-- Registration Form -->
+        <!-- Registration Form 
         <div class="container mx-auto px-4 py-12" id="register">
           <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInUp">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
@@ -285,6 +331,7 @@
             </div>
           </div>
         </div>
+        -->
 
         <!-- Categories Section -->
         <div class="container mx-auto px-4 py-12" id="categories">
@@ -294,7 +341,7 @@
           </h1>
           <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <li  class="bg-white  flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Water.png' class="img_cat" />
+              <img  src='assets/images/categories/Water.png' class="img_cat lazy_load" />
              
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
@@ -307,7 +354,7 @@
             </li>
 
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Energy.png' class="img_cat" />
+              <img  src='assets/images/categories/Energy.png' class="img_cat lazy_load" />
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Energy and Transportation
@@ -318,19 +365,9 @@
               </p>
             </div>
             </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Software.jpeg' class="img_cat" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Software
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Development of software applications that promote sustainability.
-              </p>
-            </div>
-            </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/agriculture.jpeg' class="img_cat" />
+            <li
+              class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+              <img  src='assets/images/categories/agriculture.jpeg' class="img_cat lazy_load" />
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Agriculture
@@ -341,7 +378,7 @@
             </div>
             </li>
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Education.png' class="img_cat" />
+              <img  src='assets/images/categories/Education.png' class="img_cat lazy_load" />
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Education
@@ -353,7 +390,7 @@
             </div>
             </li>
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Health.png' class="img_cat" />
+              <img  src='assets/images/categories/Health.png' class="img_cat lazy_load" />
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Health
@@ -364,7 +401,7 @@
             </div>
             </li>
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Out of the box.jpg' class="img_cat" />
+              <img  src='assets/images/categories/Out of the box.jpg' class="img_cat lazy_load" />
               <div>
               <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
                 Out of the Box
@@ -406,22 +443,22 @@
     <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center items-center">
       <!-- Day 1 Session 1-->
       <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestday1/" class="block">
-        <img src="./assets/images/day1.1.JPG" alt="Day 1 Session 1" class="w-full h-auto rounded-lg">
+        <img src="./assets/images/day1.1.JPG" alt="Day 1 Session 1" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 1: Session 1</b></p>
       </a>
       <!-- Day 1 Session 2-->
       <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestsession2day1/" class="block">
-        <img src="./assets/images/day1.2.JPG" alt="Day 1 Session 2" class="w-full h-auto rounded-lg">
+        <img src="./assets/images/day1.2.JPG" alt="Day 1 Session 2" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 1: Session 2</b></p>
       </a>
       <!-- Day 2 -->
       <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestday2/" class="block">
-        <img src="./assets/images/day2.jpg"  alt="Day 2" class="w-full h-auto rounded-lg">
+        <img src="./assets/images/day2.jpg"  alt="Day 2" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 2</b></p>
       </a>
       <!-- Day 3 -->
       <a href="https://photos.app.goo.gl/3Ka9esxJaw61rYXo8" class="block">
-        <img src="./assets/images/day3.JPG"  alt="Day 3" class="w-full h-auto rounded-lg">
+        <img src="./assets/images/day3.JPG"  alt="Day 3" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 3</b></p>
       </a>
     </div>
@@ -440,7 +477,7 @@
           <div class="flex justify-center items-center sm:flex-col md:flex-row lg:flex-row gap-5">
 
             <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md overflow-hidden " style="height:10rem">
-              <img src="assets/images/sponsors/gdsc.png" class="" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 1" />
+              <img src="assets/images/sponsors/gdsc.png" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 1" />
               <div class="p-4">
                 <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
                   GDSC
@@ -457,10 +494,48 @@
               </div>
             </div>-->
             <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden " style="height:10rem;">
-              <img src="assets/images/sponsors/mksu.jpg" class=""style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
+              <img src="assets/images/sponsors/mksu.jpg" class="lazy_load"style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
               <div class="p-4">
                 <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
                   Machakos University
+                </h5>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
+              style="height:10rem;">
+              <img src="assets/images/sponsors/ALX.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
+              <div class="p-4">
+                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+                  ALX
+                </h5>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
+              style="height:10rem;">
+              <img src="assets/images/sponsors/Ajiry.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+                alt="Sponsor 3" />
+              <div class="p-4">
+                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+                  Ajiry
+                </h5>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
+              style="height:10rem;">
+              <img src="assets/images/sponsors/Microsoft.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+                alt="Sponsor 3" />
+              <div class="p-4">
+                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+                  Microsoft
+                </h5>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
+              style="height:10rem;">
+              <img src="assets/images/sponsors/TME.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
+              <div class="p-4">
+                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+                  TME Education
                 </h5>
               </div>
             </div>
@@ -468,60 +543,184 @@
           </div>
         </div>
       
-        <section class="text-gray-700 py-16 min-h-screen">
+        <section class="text-gray-700 py-16 min-h-screen z-1 lazy_load">
           <div class="container flex flex-col justify-center p-4 mx-auto md:p-8">
-            <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl" style="font-family: 'Macondo', cursive">Frequently Asked Questions</h2>
-            <div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">How can I place an order?</summary>
-                <div class="px-4 pb-4">
-                  <p>You can easily place an order on our website by browsing our product catalog, selecting the items you want, and adding them to your cart. Then, proceed to checkout, where you can provide your shipping and payment information to complete the order.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">What payment methods do you accept?</summary>
-                <div class="px-4 pb-4">
-                  <p>We accept various payment methods, including credit cards, debit cards, net banking, and mobile wallet payments. You can choose the payment option that is most convenient for you during the checkout process.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">How long does shipping take?</summary>
-                <div class="px-4 pb-4">
-                  <p>Shipping times may vary depending on your location and the shipping method chosen. Typically, orders are processed within 1-2 business days, and delivery can take 3-7 business days within India. You will receive a tracking notification once your order is shipped.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">Can I return a product if I'm not satisfied?</summary>
-                <div class="px-4 pb-4">
-                  <p>Yes, we have a hassle-free return policy. If you are not satisfied with your purchase, you can initiate a return within 30 days of receiving the product. Please contact our customer support at <a href="" class="underline">example@gmail.com</a> for assistance.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">Do you offer international shipping?</summary>
-                <div class="px-4 pb-4">
-                  <p>Currently, we only provide shipping services within India. However, we may consider expanding our shipping options to international locations in the future. Please stay updated with our website for any changes in shipping destinations.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">What is your customer support contact?</summary>
-                <div class="px-4 pb-4">
-                  <p>If you have any questions, concerns, or need assistance, you can reach our customer support team at 9911083755 during our business hours, Monday to Saturday from 10 am to 6 pm. You can also contact us via email at <a href="" class="underline">example@gmail.com</a>.</p>
-                </div>
-              </details>
-              <details>
-                <summary class="py-2 outline-none cursor-pointer focus:underline">What are your terms and conditions?</summary>
-                <div class="px-4 pb-4">
-                  <p>You can find our detailed terms and conditions by visiting our 
-                    <a href="" class="underline">Terms of Service</a> 
-                    page on our website. It includes information about our policies, user guidelines, and more.</p>
-                </div>
-              </details>
-            </div>
+              <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl" style="font-family: 'Macondo', cursive">
+                Frequently Asked Questions</h2>
+              <div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+                <details>
+                      <summary class="py-2 outline-none cursor-pointer focus:underline">What is MksU Hackfest 2.0?
+                      </summary>
+                      <div class="px-4 pb-4">
+                        <p>MksU Hackfest 2.0 is a collaborative event focused on "Sustainability in Engineering and
+                          Technology Solutions," organized by the Machakos University Tech and Engineering Community.
+                          It brings together students to develop innovative solutions for real-world sustainability
+                          challenges.</p>
+                      </div>
+                      </details>
+                      <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">Code of conduct</summary>
+                        <div class="px-4 pb-4">
+                          <p class="mt-2">
+                            <a href="https://drive.google.com/file/d/1u-qaV1yGGZY5Rp5n-LvmXFNxpXpN_wBU/view?usp=sharing" target="_blank"
+                              rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
+                              Read our full Code of Conduct here
+                            </a>
+                          </p>
+                        </div>
+                      </details>
+                      <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">Who can participate?</summary>
+                        <div class="px-4 pb-4">
+                          <p>The hackfest is open to all university students, regardless of their academic background. We
+                            encourage participation from diverse fields to promote cross-disciplinary innovation.</p>
+                        </div>
+                      </details>
+                      <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">Do I need to be a technical expert
+                          to participate?</summary>
+                        <div class="px-4 pb-4">
+                          <p>No! While technical skills are valuable, we welcome participants from all skill levels. Teams
+                            benefit from diverse perspectives, including design, business, and environmental expertise.
+                          </p>
+                        </div>
+                      </details>
+                      <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">What is the event format?
+                        </summary>
+                        <div class="px-4 pb-4">
+                          <p>The event includes:
+                          <ul>
+                            <li>Hands-on hackathon sessions</li>
+                            <li>Technical workshops</li>
+                            <li>Mentorship opportunities</li>
+                            <li>Industry expert presentations</li>
+                            <li>Networking sessions</li>
+                          </ul>
+                          </p>
+                        </div>
+                      </details>
+                      <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">Will there be mentorship
+                          available?</summary>
+                        <div class="px-4 pb-4">
+                          <p>Yes! Industry professionals and academic experts will be available throughout the event to
+                            guide teams and provide valuable insights.</p>
+                          </div>
+                          </details>
+                          <details>
+                        <summary class="py-2 outline-none cursor-pointer focus:underline">What kind of projects can we work
+                          on?</summary>
+                        <div class="px-4 pb-4">
+                          <p>Projects should address sustainability challenges through technology and engineering
+                            solutions. This could include:
+                          
+                          <ul>
+                            <li>Renewable energy applications</li>
+                            <li>Waste management solutions</li>
+                            <li>Smart resource management</li>
+                            <li>Sustainable agriculture tech</li>
+                            <li>Green transportation solutions</li>
+                          </ul>
+                          </p>
+                          </div>
+                          </details>
+                          <details>
+                          <summary class="py-2 outline-none cursor-pointer focus:underline">Can I participate as an
+                            individual?</summary>
+                          <div class="px-4 pb-4">
+                            <p>While we encourage team participation, individual registrations are welcome. We'll help match
+                              you with other participants to form balanced teams.</p>
+                            </div>
+                            </details>
+                            <details>
+                          <summary class="py-2 outline-none cursor-pointer focus:underline">What's the maximum team size?
+                          </summary>
+                          <div class="px-4 pb-4">
+                          <p>Teams can have up to 4 members. We recommend having members with diverse skill sets.</p>
+                          </div>
+                          </details>
+                          <details>
+                            <summary class="py-2 outline-none cursor-pointer focus:underline">What should I bring?</summary>
+                            <div class="px-4 pb-4">
+                              <p>
+                              <ul>
+                                <li>Your laptop and charger</li>
+                                <li>Student ID</li>
+                                <li>Any specific software or tools you prefer working with</li>
+                                <li>Enthusiasm and creative ideas</li>
+                              </ul>
+                              </p>
+                            </div>
+                          </details>
+                          <details>
+                            <summary class="py-2 outline-none cursor-pointer focus:underline">What resources will be provided?
+                            </summary>
+                            <div class="px-4 pb-4">
+                              <p>
+                              <ul>
+                                <li>Development tools and platforms</li>
+                                <li> Cloud credits (courtesy of our partners)</li>
+                                <li>Technical documentation</li>
+                                <li>Mentorship support</li>
+                                <li>Refreshments during the event</li>
+                              </ul>
+                              </p>
+                            </div>
+                          </details>
+                          <details>
+                          <summary class="py-2 outline-none cursor-pointer focus:underline">Is there any pre-event preparation
+                            required?</summary>
+                          <div class="px-4 pb-4">
+                          <p>We recommend:
+                          
+                          <ul>
+                            <li>Familiarizing yourself with basic sustainability concepts</li>
+                            <li> Reviewing provided learning resources (to be shared after registration)</li>
+                            <li>Installing common development tools</li>
+                            <li>Joining our pre-event orientation session</li>
+                          
+                          </ul>
+                          
+                          </p>
+                          </div>
+                          </details>
+                          <details>
+                      <summary class="py-2 outline-none cursor-pointer focus:underline">What are the judging criteria?
+                      </summary>
+                      <div class="px-4 pb-4">
+                          <p>Projects will be evaluated based on:
+                          
+                          <ul>
+                            <li>Innovation and creativity</li>
+                            <li> Sustainability impact</li>
+                            <li> Technical implementation</li>
+                            <li>Scalability and feasibility</li>
+                            <li>Presentation quality</li>
+                          </ul>
+                          </p>
+                          </div>
+                          </details>
+                          <details>
+                      <summary class="py-2 outline-none cursor-pointer focus:underline">Who are the organizing partners?
+                      </summary>
+                      <div class="px-4 pb-4">
+                          <p>The event is organized in collaboration with:
+                          <ul>
+                            <li>Machakos University</li>
+                            <li> Microsoft</li>
+                            <li> ALX</li>
+                            <li>GDSC</li>
+                          </ul>
+                          </p>
+                          </div>
+                          </details>
+                          </div>
           </div>
-        </section>
+      </section>
 
         <!-- Contact Section -->
-        <div class="container mx-auto px-4 py-12 bg-white" id="contact">
+        <div class="container mx-auto px-4 py-12 bg-white lazy_load" id="contact">
           <h1 class="text-3xl font-bold text-center mb-6" style="font-family: 'Macondo', cursive; color: #333">
             Contact Us
           </h1>
@@ -586,6 +785,19 @@
                   </a>
                 </div>
               </div>
+              <!-- Download Button -->
+              <a href="assets/docs/MksU Hackfest 2024 Prospectus.pdf" download class="download-button">
+                <button class="d-anchor">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="size-6 d-svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
+                  <p style="font-family: 'Macondo', cursive">
+                    Everything you need to know about MksU Hackfest!
+                  </p>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -614,6 +826,7 @@
         <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 
         <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/dits.js"></script>
         <script src="assets/js/navbar.js"></script>
         <script src="assets/js/smooth.js"></script>
         <script defer src="assets/js/main.js" type="module"></script>
@@ -623,22 +836,51 @@
             const content = document.getElementById('accordion' + id);
             content.classList.toggle('hidden');
           }
+          
+          const lazyElements = document.querySelectorAll('.lazy_load');
+
+          function toggleAccordion(id) {
+            const content = document.getElementById('accordion' + id);
+            content.classList.toggle('hidden');
+          }
+
+               const observer=new IntersectionObserver((entries,observer)=>{
+                  entries.forEach(entry=>{
+                    if(entry.isIntersecting){
+                      entry.target.classList.add('visible');
+                    }
+                      else{
+                        entry.target.classList.remove('visible');
+                      }
+                    }
+                  )
+                })
+              
+              lazyElements.forEach(element=>{
+                observer.observe(element)
+              })
+              const navCloseBtn=document.querySelector('#navbarClose')
+              const sideBar=document.querySelector('.sideBar')
+              sideBar.addEventListener('click',function(e){
+                   e.stopPropagation()
+              })
+
+              document.getElementById("mobile-menu-button").addEventListener("click", function (e) {
+                sideBar.classList.add('showNavbar')
+              
+                });
+              navCloseBtn.addEventListener('click',function(e){
+                sideBar.classList.remove('showNavbar')
+              })
+
+              
+
         </script>
 
         <script>
           id = "luma-checkout"
           src = "https://embed.lu.ma/checkout-button.js"
 
-          document
-            .getElementById("mobile-menu-button")
-            .addEventListener("click", function () {
-              const menu = document.getElementById("mobile-menu");
-              if (menu.classList.contains("hidden")) {
-                menu.classList.remove("hidden");
-              } else {
-                menu.classList.add("hidden");
-              }
-            });
 
           var btn = $("#back-button");
 
@@ -727,6 +969,108 @@
             },
           });
         </script>
+</body>
+
+</html>
+      
+
+        <script>
+          id = "luma-checkout"
+          src = "https://embed.lu.ma/checkout-button.js"
+
+          document
+            .getElementById("mobile-menu-button")
+            .addEventListener("click", function (e) {
+              e.target.classList.add('showNavbar')
+            });
+
+          var btn = $("#back-button");
+
+          $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+              btn.addClass("show");
+            } else {
+              btn.removeClass("show");
+            }
+          });
+
+          btn.on("click", function (e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "300");
+          });
+
+          var swiper = new Swiper(".mySwiperMembers", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: {
+              delay: 2500, // Adjust the delay (in ms) as needed
+              disableOnInteraction: false, // Keep autoplay active after user interaction
+            },
+            pagination: {
+              el: ".members-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".members-next",
+              prevEl: ".members-prev",
+            },
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+          });
+
+          var swiper = new Swiper(".mySwiperLeads", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: {
+              delay: 2500, // Adjust the delay (in ms) as needed
+              disableOnInteraction: false, // Keep autoplay active after user interaction
+            },
+            pagination: {
+              el: ".leads-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".leads-next",
+              prevEl: ".leads-prev",
+            },
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+          });
+        </script> -->
 </body>
 
 </html>

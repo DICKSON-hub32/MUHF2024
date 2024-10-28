@@ -20,7 +20,7 @@ export const leads = [
     github: "#",
   },
   {
-    name: "Rose Njeri",
+    name: "Rose Njuguna",
     profession: "Organizer",
     src: "assets/images/team/ROSE.jpg",
     alt: "Rose Njeri",
@@ -66,7 +66,7 @@ export const members = [
   },
   {
     name: "Jairus Mariga",
-    profession: "Marketing Member",
+    profession: "Marketing member",
     src: "assets/images/team/JAIRUS.jpg",
     alt: "Jairus Mariga",
     facebook: "#",
@@ -76,9 +76,21 @@ export const members = [
   },
   {
     name: "Salem Lumumba",
-    profession: "Marketing Member",
+    profession: "Marketing member",
     src: "assets/images/team/SALEM.png",
     alt: "Salem Lumumba",
+  },
+  {
+    name: "Brian Ndesa",
+    profession: "R & D Member",
+    src: "assets/images/team/albert.jpg",
+    alt: "Albert",
+  },
+  {
+    name: "Brian Ndesa",
+    profession: "Operations Member",
+    src: "assets/images/team/albert.jpg",
+    alt: "Albert",
   },
 
   {
@@ -86,6 +98,12 @@ export const members = [
     profession: "R & D Member",
     src: "assets/images/team/erick.png",
     alt: "Eric Kaloki",
+  },
+  {
+    name: "Stanely Mwaniki",
+    profession: "Operations Member",
+    src: "assets/images/team/Mwaniki.jpg",
+    alt: "Frank",
   },
   {
     name: "Anoid Mutunga",
@@ -107,7 +125,7 @@ export const members = [
   },
   {
     name: "Brian Karanja",
-    profession: "Marketing Member",
+    profession: "marketing member",
     src: "assets/images/team/BRIAN.jpg",
     alt: "Brian Karanja",
   },
