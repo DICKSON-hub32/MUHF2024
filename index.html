@@ -8,9 +8,15 @@
   <link rel="apple-touch-icon" href="assets/images/muhf-logo.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <meta name="csrf-token" content="{{ csrf_token }}" /> -->
 
   <title>MksU Hackfest | 2nd Edition</title>
+  <meta name="author" content="Machakos University Hackfest Team" />
+  <meta name="keywords" content="Hackathon, Machakos University, Hackfest, Technology, Innovation, Sustainability Machakos Hackfest 2024, hackfest, 2024" />
+  <meta property="og:title" content="MksU Hackfest | 2nd Edition" />
+  <meta property="og:description" content="Join us for the 2nd Edition of the Machakos University Hackfest, a 3-day event of innovation and creativity." />
+  <meta property="og:image" content="assets/images/muhf-logo.png" />
+  <meta property="og:url" content="https://mksuhackfest.club" />
+  
 
   <meta name="description"
     content="Welcome to the 2nd Edition of the Machakos University Hackfest. We are thrilled to have this event to unite and foster creative minds in implementing and actualizing solutions for real time problems." />
@@ -350,7 +356,7 @@
               <p class="text-gray-700 "  style="font-family: 'Montserrat', sans-serif;width:15rem">
                 Solutions for water conservation, purification, &amp; management.
               </p>
-            </div>
+            
             </li>
 
             <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
@@ -413,6 +419,7 @@
             </div>
             </li>
           </ul>
+          </div>
         </div>
 
         <div class="container mx-auto px-4 py-12">
@@ -426,7 +433,7 @@
               <div class="swiper-wrapper content" id="leads"></div>
             </div>
 
-            <div class="swiper-pagination leads-pagination"></div>
+            <!-- <div class="swiper-pagination leads-pagination"></div> -->
           </section>
 
           <section class="justify-center items-center">
@@ -434,7 +441,7 @@
               <div class="swiper-wrapper content" id="members"></div>
             </div>
 
-            <div class="swiper-pagination members-pagination"></div>
+            <!-- <div class="swiper-pagination members-pagination"></div> -->
           </section>
         </div>
    <!-- Gallery -->
@@ -465,7 +472,7 @@
     
     </div>  
         <!-- Sponsors Section -->
-        <div class="container mx-auto px-4 py-12" id="sponsors">
+        <div class="container mx-auto mb-2 px-4 py-12" id="sponsors">
           <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
             Our Sponsors
           </h1>
@@ -1043,6 +1050,108 @@
             autoplay: {
               delay: 2500, // Adjust the delay (in ms) as needed
               disableOnInteraction: false, // Keep autoplay active after user interaction
+            },
+            pagination: {
+              el: ".leads-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".leads-next",
+              prevEl: ".leads-prev",
+            },
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+          });
+        </script> -->
+</body>
+
+</html>
+      
+
+        <script>
+          id = "luma-checkout"
+          src = "https://embed.lu.ma/checkout-button.js"
+
+          document
+            .getElementById("mobile-menu-button")
+            .addEventListener("click", function (e) {
+              e.target.classList.add('showNavbar')
+            });
+
+          var btn = $("#back-button");
+
+          $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+              btn.addClass("show");
+            } else {
+              btn.removeClass("show");
+            }
+          });
+
+          btn.on("click", function (e) {
+            e.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "300");
+          });
+
+          var swiper = new Swiper(".mySwiperMembers", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: {
+              delay: 2500, // Adjust the delay (in ms) as needed
+              disableOnInteraction: true, // Keep autoplay active after user interaction
+            },
+            pagination: {
+              el: ".members-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".members-next",
+              prevEl: ".members-prev",
+            },
+            breakpoints: {
+              // when window width is >= 320px
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              // when window width is >= 480px
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              // when window width is >= 640px
+              640: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+            },
+          });
+
+          var swiper = new Swiper(".mySwiperLeads", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            autoplay: {
+              delay: 2500, // Adjust the delay (in ms) as needed
+              disableOnInteraction: true, // Keep autoplay active after user interaction
             },
             pagination: {
               el: ".leads-pagination",
