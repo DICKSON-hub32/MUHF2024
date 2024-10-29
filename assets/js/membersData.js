@@ -30,9 +30,9 @@ export const leads = [
     github: "#",
   },
   {
-    name: "Caleb Musima",
+    name: "Joseph Ababu",
     profession: "Organizer",
-    src: "assets/images/team/CALEB.png",
+    src: "assets/images/team/Ababu.jpg",
     alt: "Caleb Musima",
     facebook: "#",
     twitter: "#",
@@ -56,7 +56,7 @@ export const leads = [
 export const members = [
   {
     name: "Anthony Marugu",
-    profession: "Operations Team Member",
+    profession: "Operations Member",
     src: "assets/images/team/ANTHONY.png",
     alt: "Anthony Marugu",
     facebook: "#",

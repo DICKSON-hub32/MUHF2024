@@ -11,12 +11,14 @@
 
   <title>MksU Hackfest | 2nd Edition</title>
   <meta name="author" content="Machakos University Hackfest Team" />
-  <meta name="keywords" content="Hackathon, Machakos University, Hackfest, Technology, Innovation, Sustainability Machakos Hackfest 2024, hackfest, 2024" />
+  <meta name="keywords"
+    content="Hackathon, Machakos University, Hackfest, Technology, Innovation, Sustainability Machakos Hackfest 2024, hackfest, 2024" />
   <meta property="og:title" content="MksU Hackfest | 2nd Edition" />
-  <meta property="og:description" content="Join us for the 2nd Edition of the Machakos University Hackfest, a 3-day event of innovation and creativity." />
+  <meta property="og:description"
+    content="Join us for the 2nd Edition of the Machakos University Hackfest, a 3-day event of innovation and creativity." />
   <meta property="og:image" content="assets/images/muhf-logo.png" />
   <meta property="og:url" content="https://mksuhackfest.club" />
-  
+
 
   <meta name="description"
     content="Welcome to the 2nd Edition of the Machakos University Hackfest. We are thrilled to have this event to unite and foster creative minds in implementing and actualizing solutions for real time problems." />
@@ -35,28 +37,123 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<style>
-  
-     .lazy_load {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-in-out;
-        }
-        .lazy_load.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .hideNavbar{
-          transform:translateX(-100%);
-          transition: all 0.3s ease-in-out;
+  <style>
+    .lazy_load {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-in-out;
+    }
 
-        }
-        .hideNavbar.showNavbar{
-          transform:translateX(0);
-          transition: all 0.3s ease-in-out;
-        }
+    .lazy_load.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hideNavbar {
+      transform: translateX(-100%);
+      transition: all 0.3s ease-in-out;
+
+    }
+
+    .hideNavbar.showNavbar {
+      transform: translateX(0);
+      transition: all 0.3s ease-in-out;
+    }
   </style>
-</style>
+  <style>
+    .carousel-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      gap: 0.7rem
+    }
+  
+  
+  
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 100000000000;
+      display: flex;
+      outline: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .carousel-button:hover {
+      background: rgba(255, 255, 255, 1);
+    }
+  
+    .carousel-button-prev {
+      left: 10px;
+    }
+  
+    .carousel-button-next {
+      right: 10px;
+    }
+  
+    .img_cat {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+  
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+  
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+    }
+  
+    .dot.active {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  
+    @media (max-width: 640px) {
+      .carousel-slide {
+        flex: 0 0 100%;
+      }
+  
+    }
+  
+    @media (min-width: 641px) and (max-width: 1024px) {
+      .carousel-slide {
+        flex: 0 0 50%;
+      }
+    }
+  
+    @media (min-width: 1025px) {
+      .carousel-slide {
+        flex: 0 0 33.333%;
+      }
+    }
+  </style>
+  </style>
 
 </head>
 
@@ -69,7 +166,7 @@
   </div>
 
   <!-- Navbar -->
-  <nav class="bg-white shadow ">
+  <nav class="bg-white shadow topNav">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex items-center justify-between h-16">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -89,7 +186,7 @@
               <img src="assets/images/MUHF.png" alt="MKSU Hackfest" class="logo" />
             </a>
           </div>
-          <div class="hidden sm:block " >
+          <div class="hidden sm:block ">
             <div class="flex space-x-4">
               <a href="#hero" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
               <a href="#about" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
@@ -104,54 +201,57 @@
               <a href="#categories" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Categories</a>
               <a href="#sponsors" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Sponsors</a>
               <a href="#contact" class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestsession2day1/"
+                class="text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Gallary</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div  style=" background-color: rgba(255, 255, 255,0.7);width:50%; max-width:20rem ;color:white" class=" fixed inset-y-0 left-0 w-72  backdrop-blur-sm shadow-lg z-50 transform transition-all duration-300 sideBar hideNavbar">
+    <div
+      class=" fixed inset-y-0 left-0 w-72  backdrop-blur-sm shadow-lg z-50 transform transition-all duration-300 sideBar hideNavbar">
       <!-- Header -->
       <div style="justify-content: space-between;" class="p-4 border-b border-gray-200 flex flex-column ">
         <h2 class="text-xl font-semibold " style="color:rgb(9, 67, 124)">Menu</h2>
-         <button id="navbarClose" class="text-xl font-semibold text-white" style="background-color:rgb(9, 67, 124);border-radius:3px;padding:2px 8px 2px 8px;outline: none;">X</button>
+        <button id="navbarClose" class="text-xl font-semibold text-white"
+          style="background-color:rgb(9, 67, 124);border-radius:3px;padding:2px 8px 2px 8px;outline: none;">X</button>
 
       </div>
-      
+
       <!-- Navigation Links -->
       <div class="px-2 pt-4 pb-3 space-y-1 ">
-        <a href="#hero" 
-        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
-           class="block px-4 py-3 text-black rounded-lg  hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+        <a href="#hero" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg  hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           Home
         </a>
-        
-        <a href="#about" 
-          style="border-bottom:2px solid rgb(9, 67, 124);font-weight:200;font-size:18px;" 
+
+        <a href="#about" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:200;font-size:18px;"
           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           About
         </a>
-        
-        <a href="#agenda" 
-        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
-           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+
+        <a href="#agenda" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           Agenda
         </a>
-        
-        <a href="#categories"
-        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;" 
-           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+
+        <a href="#categories" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           Categories
         </a>
-        <a href="#sponsors" 
-        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
-           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+        <a href="#sponsors" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           Sponsors
         </a>
-        <a href="#contact" 
-        style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
-           class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+        <a href="#contact" style="border-bottom:1px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
           Contact
+        </a>
+        <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestsession2day1/"
+          style="border-bottom:2px solid rgb(9, 67, 124);font-weight:500;font-size:18px;"
+          class="block px-4 py-3 text-black rounded-lg hover:bg-blue-100 transition-colors duration-200 text-base font-medium">
+          Gallary
         </a>
       </div>
     </div>
@@ -159,7 +259,8 @@
 
   <!-- Hero Section -->
   <div class="bg-cover bg-center h-screen text-white " style="background-image: url('assets/images/main.jpg')" id="hero">
-    <div class="h-full bg-black bg-opacity-50 flex items-center justify-center lazy_load">
+    <!-- REMOVE bg-black bg-opacity-50 -->
+    <div class="h-full  flex items-center justify-center lazy_load">
       <div class="text-center">
         <h1 class="text-5xl font-bold animate__animated animate__fadeInDown" style="font-family: 'Macondo', cursive">
           Welcome to MksU Hackfest 2024
@@ -172,7 +273,7 @@
         <!-- Hero Section -->
         <!-- <div class="bg-cover bg-center h-screen text-white" style="background-image: url('assets/images/ADS_2157.jpg')"
           id="hero"> -->
-          <!-- <div class="h-full bg-black bg-opacity-50 flex items-center justify-center">
+        <!-- <div class="h-full bg-black bg-opacity-50 flex items-center justify-center">
             <div class="text-center">
               <h1 class="text-5xl font-bold animate__animated animate__fadeInDown"
                 style="font-family: 'Macondo', cursive">
@@ -182,146 +283,144 @@
                 Join us for a 3-day event of innovation and creativity
               </p>
               -->
-              <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
-                class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-bold animate__animated animate__fadeInUp hover:bg-blue-700 hover:animate__shakeX"
-                data-luma-action="checkout" data-luma-event-id="evt-CAnPrpULOEUaWh2">
-                Register Now
-              </a>
+        <a href="https://lu.ma/event/evt-CAnPrpULOEUaWh2"
+          class="mt-8 inline-block bg-blue-500 text-white px-6 py-3 rounded-full font-bold animate__animated animate__fadeInUp hover:bg-blue-700 hover:animate__shakeX"
+          data-luma-action="checkout" data-luma-event-id="evt-CAnPrpULOEUaWh2">
+          Register Now
+        </a>
 
 
-            <!-- </div>
+        <!-- </div>
           </div>  -->
         <!-- </div> -->
-              <p class="slogan" style="font-family: pt mono;">Innovate , collaborate, empower</p>
+        <p class="slogan" style="font-family: pt mono;">Innovate , collaborate, empower</p>
       </div>
     </div>
   </div>
 
-        <!-- Countdown Timer -->
-        <div class="container mx-auto text-center py-16">
-          <h2 class="text-3xl font-bold mb-6 animate__animated animate__fadeInDown"
-            style="font-family: 'Macondo', cursive">
-            Countdown
-          </h2>
-          <div id="countdown" class="flex justify-center space-x-4 text-2xl"
-            style="font-family: 'Jersey 20', sans-serif">
+  <!-- Countdown Timer -->
+  <div class="container mx-auto text-center  py-16">
+    <h2 class="text-3xl font-bold mb-6 animate__animated animate__fadeInDown" style="font-family: 'Macondo', cursive">
+      Countdown
+    </h2>
+    <div id="countdown" class="space-x-4 text-2xl" style="font-family: 'Jersey 20', sans-serif">
+    </div>
+
+  </div>
+
+  <!-- About Section -->
+  <div class="container mx-auto text-center py-16" id="about">
+    <h1 class="text-4xl font-bold mb-6" style="font-family: 'Macondo', cursive">
+      About
+    </h1>
+    <div class="md:flex md:justify-center md:items-center mb-8">
+      <img src="assets/images/ADS_2157.jpg" alt="MksU Hackfest Image"
+        class="rounded-lg shadow-lg md:w-1/3 mb-6 md:mb-0 lazy_load" />
+      <div class="md:w-2/3 md:ml-8">
+        <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
+          The Machakos University (MksU) Tech and Engineering Community
+          presents the second MksU Hackfest, focused on "Sustainability in
+          Engineering and Technology Solutions." In partnership with the MksU
+          Innovation Club, Microsoft Learn Students Ambassadors, Google
+          Developer Student Club Machakos University, and Techo-Engineering
+          Association, we offer a platform for students from diverse
+          backgrounds to develop sustainable solutions for real-world
+          challenges.
+        </p>
+        <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
+          This dynamic event fosters innovation through the convergence of
+          minds and perspectives. Participants will enhance skills via
+          workshops and mentorships centered on sustainable Technological and
+          Engineering practices, bridging academia and industry.
+        </p>
+        <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
+          After a successful inaugural edition, join us again to shape a
+          sustainable future. Be part of something greater, driving positive
+          change through your creativity. MksU Hackfest 2.0 calls for
+          innovation, collaboration, and empowerment.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agenda Section -->
+  <div class="container mx-auto mt-10" id="agenda">
+    <h1 class="text-4xl font-bold text-center mb-8" style="font-family: 'Macondo', cursive">
+      Agenda
+    </h1>
+    <div class="relative">
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-calendar-day"></i>
           </div>
-
-        </div>
-
-        <!-- About Section -->
-        <div class="container mx-auto text-center py-16" id="about">
-          <h1 class="text-4xl font-bold mb-6" style="font-family: 'Macondo', cursive">
-            About 
-          </h1>
-          <div class="md:flex md:justify-center md:items-center mb-8">
-            <img src="assets/images/ADS_2157.jpg" alt="MksU Hackfest Image"
-              class="rounded-lg shadow-lg md:w-1/3 mb-6 md:mb-0 lazy_load" />
-            <div class="md:w-2/3 md:ml-8">
-              <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
-                The Machakos University (MksU) Tech and Engineering Community
-                presents the second MksU Hackfest, focused on "Sustainability in
-                Engineering and Technology Solutions." In partnership with the MksU
-                Innovation Club, Microsoft Learn Students Ambassadors, Google
-                Developer Student Club Machakos University, and Techo-Engineering
-                Association, we offer a platform for students from diverse
-                backgrounds to develop sustainable solutions for real-world
-                challenges.
-              </p>
-              <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
-                This dynamic event fosters innovation through the convergence of
-                minds and perspectives. Participants will enhance skills via
-                workshops and mentorships centered on sustainable Technological and
-                Engineering practices, bridging academia and industry.
-              </p>
-              <p class="text-lg leading-relaxed mb-4 md:text-left" style="font-family: 'Jersey 20', sans-serif">
-                After a successful inaugural edition, join us again to shape a
-                sustainable future. Be part of something greater, driving positive
-                change through your creativity. MksU Hackfest 2.0 calls for
-                innovation, collaboration, and empowerment.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Agenda Section -->
-        <div class="container mx-auto mt-10" id="agenda">
-          <h1 class="text-4xl font-bold text-center mb-8" style="font-family: 'Macondo', cursive">
-            Agenda
-          </h1>
-          <div class="relative">
-            <div class="timeline">
-              <!-- Timeline Item 1 -->
-              <div class="timeline-item">
-                <div class="timeline-icon">
-                  <i class="fas fa-calendar-day"></i>
-                </div>
-                <div class="timeline-content">
-                  <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    5th November (Tuesday)
-                  </h3>
-                  <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
-                    <li style="color: #fff">
-                      Opening ceremony and introduction to the hackfest
-                      (Amphitheatre)
-                    </li>
-                    <li style="color: #fff">
-                      Introductions from various stakeholders, parastatals,
-                      organizations, and firms
-                    </li>
-                    <li style="color: #fff">Keynote speeches</li>
-                    <li style="color: #fff">Breakout sessions</li>
-                    <li style="color: #fff">Showcase of innovations</li>
-                    <li style="color: #fff">Meet the teams</li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Timeline Item 2 -->
-              <div class="timeline-item">
-                <div class="timeline-icon">
-                  <i class="fas fa-calendar-day"></i>
-                </div>
-                <div class="timeline-content">
-                  <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    6th November (Wednesday)
-                  </h3>
-                  <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
-                    <li style="color: #fff">
-                      Hacking commences for the next 36 hours
-                    </li>
-                    <li style="color: #fff">
-                      Short breaks for meals and fun activities
-                    </li>
-                    <li style="color: #fff">Announcements</li>
-                    <li style="color: #fff">Countdown</li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- Timeline Item 3 -->
-              <div class="timeline-item">
-                <div class="timeline-icon">
-                  <i class="fas fa-calendar-day"></i>
-                </div>
-                <div class="timeline-content">
-                  <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
-                    7th November (Thursday)
-                  </h3>
-                  <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
-                    <li style="color: #fff">Judging and awarding session</li>
-                    <li style="color: #fff">Closing ceremony</li>
-                    <li style="color: #fff">
-                      Showcase of products and services by startups and innovators
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="timeline-content">
+            <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
+              5th November (Tuesday)
+            </h3>
+            <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
+              <li style="color: #fff">
+                Opening ceremony and introduction to the hackfest
+                (Amphitheatre)
+              </li>
+              <li style="color: #fff">
+                Introductions from various stakeholders, parastatals,
+                organizations, and firms
+              </li>
+              <li style="color: #fff">Keynote speeches</li>
+              <li style="color: #fff">Breakout sessions</li>
+              <li style="color: #fff">Showcase of innovations</li>
+              <li style="color: #fff">Meet the teams</li>
+            </ul>
           </div>
         </div>
 
-        <!-- Registration Form 
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="timeline-content">
+            <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
+              6th November (Wednesday)
+            </h3>
+            <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
+              <li style="color: #fff">
+                Hacking commences for the next 36 hours
+              </li>
+              <li style="color: #fff">
+                Short breaks for meals and fun activities
+              </li>
+              <li style="color: #fff">Announcements</li>
+              <li style="color: #fff">Countdown</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-calendar-day"></i>
+          </div>
+          <div class="timeline-content">
+            <h3 class="text-lg font-bold mb-3" style="font-family: 'Macondo', cursive; color: #fff">
+              7th November (Thursday)
+            </h3>
+            <ul class="list-disc pl-5 leading-relaxed" style="font-family: 'Montserrat', sans-serif">
+              <li style="color: #fff">Judging and awarding session</li>
+              <li style="color: #fff">Closing ceremony</li>
+              <li style="color: #fff">
+                Showcase of products and services by startups and innovators
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+  <!-- Registration Form 
         <div class="container mx-auto px-4 py-12" id="register">
           <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg animate__animated animate__fadeInUp">
             <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
@@ -339,114 +438,116 @@
         </div>
         -->
 
-        <!-- Categories Section -->
-        <div class="container mx-auto px-4 py-12" id="categories">
-          <h1 class="text-3xl font-bold text-center mb-6 animate__animated animate__fadeInDown"
-            style="font-family: 'Macondo', cursive; color: #333">
-            Categories
-          </h1>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <li  class="bg-white  flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Water.png' class="img_cat lazy_load" />
-             
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Water
-              </h2>
-              <p class="text-gray-700 "  style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Solutions for water conservation, purification, &amp; management.
-              </p>
-            
-            </li>
-
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Energy.png' class="img_cat lazy_load" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Energy and Transportation
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Innovative ideas for sustainable energy &amp; transportation
-                systems.
-              </p>
+  <!-- Categories Section -->
+  <div class="container mx-auto px-4 py-12" id="categories">
+    <h1 class="text-3xl font-bold text-center mb-6 animate__animated animate__fadeInDown"
+      style="font-family: 'Macondo', cursive; color: #333">
+      Categories
+    </h1>
+    <div class="carousel-container">
+      <div class="carousel-track ">
+        <div
+          class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+          <img src='assets/images/categories/Water.png' class="img_cat lazy_load" />
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Water</h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Solutions for water
+              conservation, purification, &amp; management.</p>
             </div>
-            </li>
-            <li
-              class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/agriculture.jpeg' class="img_cat lazy_load" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Agriculture
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Sustainable farming practices &amp; technologies.
-              </p>
             </div>
-            </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Education.png' class="img_cat lazy_load" />
+            <div
+              class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+              <img src='assets/images/categories/Energy.png' class="img_cat lazy_load" />
               <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Education
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Educational tools &amp; platforms that enhance learning &amp;
-                sustainability awareness.
-              </p>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Energy and
+              Transportation
+            </h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Innovative ideas for
+              sustainable
+              energy &amp; transportation systems.</p>
             </div>
-            </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Health.png' class="img_cat lazy_load" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Health
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Health tech solutions for improving healthcare &amp; wellbeing.
-              </p>
+        </div>
+        <div
+          class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+          <img src='assets/images/categories/agriculture.jpeg' class="img_cat lazy_load" />
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Agriculture
+            </h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Sustainable farming
+              practices
+              &amp; technologies.</p>
             </div>
-            </li>
-            <li class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
-              <img  src='assets/images/categories/Out of the box.jpg' class="img_cat lazy_load" />
-              <div>
-              <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">
-                Out of the Box
-              </h2>
-              <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">
-                Creative &amp; innovative solutions that don't fit into the above
-                categories.
-              </p>
+        </div>
+        <div
+          class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+          <img src='assets/images/categories/Education.png' class="img_cat lazy_load" />
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Education</h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Educational tools &amp;
+              platforms
+              that enhance learning &amp; sustainability awareness.</p>
             </div>
-            </li>
-          </ul>
-          </div>
+        </div>
+        
+        <div
+          class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+          <img src='assets/images/categories/Health.png' class="img_cat lazy_load" />
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Health</h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Health tech solutions for
+              improving
+              healthcare &amp; wellbeing.</p>
+            </div>
+        </div>
+        
+        <div
+          class="carousel-slide bg-white flex flex-col justify-center items-center rounded-lg shadow-md p-6 animate__animated animate__fadeInUp">
+          <img src='assets/images/categories/Out of the box.jpg' class="img_cat lazy_load" />
+          <div>
+            <h2 class="text-xl font-bold text-gray-800 mb-3" style="font-family: 'Jersey 20', sans-serif">Out of the Box
+            </h2>
+            <p class="text-gray-700" style="font-family: 'Montserrat', sans-serif;width:15rem">Creative &amp; innovative
+              solutions
+              that don't fit into the above categories.</p>
+            </div>
+        </div>
+        </div>
+        <button class="carousel-button carousel-button-prev  " style="color:black;"><i style="font-size:25px"
+            class="fa-solid fa-left-long "></i></button>
+        <button class="carousel-button carousel-button-next"><i style="font-size:25px"
+            class="fa-solid fa-right-long"></i></button>
+        
+        <div class="carousel-dots"></div>
+        </div>
+        </div>
         </div>
 
-        <div class="container mx-auto px-4 py-12">
-          <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
-            Team
-          </h1>
+  <div class="container mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
+      Team
+    </h1>
 
-          <!-- Team section -->
-          <section class="justify-center items-center">
-            <div class="swiper mySwiperLeads container">
-              <div class="swiper-wrapper content" id="leads"></div>
-            </div>
+    <!-- Team section -->
+    <section class="justify-center items-center">
+      <div class="swiper mySwiperLeads container">
+        <div class="swiper-wrapper content" id="leads"></div>
+      </div>
 
-            <!-- <div class="swiper-pagination leads-pagination"></div> -->
-          </section>
+      <!-- <div class="swiper-pagination leads-pagination"></div> -->
+      </section>
 
-          <section class="justify-center items-center">
-            <div class="swiper mySwiperMembers container">
-              <div class="swiper-wrapper content" id="members"></div>
-            </div>
+    <section class="justify-center items-center">
+      <div class="swiper mySwiperMembers container">
+        <div class="swiper-wrapper content" id="members"></div>
+      </div>
 
-            <!-- <div class="swiper-pagination members-pagination"></div> -->
-          </section>
-        </div>
-   <!-- Gallery -->
-   <div class="container mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">MksU Hackfest 2023</h1>
+      <!-- <div class="swiper-pagination members-pagination"></div> -->
+      </section>
+      </div>
+      <!-- Gallery -->
+      <div class="container mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">MksU Hackfest
+      2023</h1>
     <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 justify-center items-center">
       <!-- Day 1 Session 1-->
       <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestday1/" class="block">
@@ -460,536 +561,448 @@
       </a>
       <!-- Day 2 -->
       <a href="https://mksuhackfest2023.pixieset.com/mksuhackfestday2/" class="block">
-        <img src="./assets/images/day2.jpg"  alt="Day 2" class="w-full h-auto rounded-lg lazy_load">
+        <img src="./assets/images/day2.jpg" alt="Day 2" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 2</b></p>
       </a>
       <!-- Day 3 -->
       <a href="https://photos.app.goo.gl/3Ka9esxJaw61rYXo8" class="block">
-        <img src="./assets/images/day3.JPG"  alt="Day 3" class="w-full h-auto rounded-lg lazy_load">
+        <img src="./assets/images/day3.JPG" alt="Day 3" class="w-full h-auto rounded-lg lazy_load">
         <p></br><b>Day 3</b></p>
       </a>
     </div>
-    
-    </div>  
-        <!-- Sponsors Section -->
-        <div class="container mx-auto mb-2 px-4 py-12" id="sponsors">
-          <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
-            Our Sponsors
-          </h1>
-          <p class="text-center text-gray-700 mb-8" style="font-family: 'Montserrat', sans-serif">
-            We are grateful to our sponsors for their generous support. Their
-            contributions make MksU Hackfest 2024 possible.
-          </p>
+  </div>
+  <!-- Sponsors Section -->
+  <div class="container mx-auto mb-2 px-4 py-12" id="sponsors">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6" style="font-family: 'Macondo', cursive">
+      Our Sponsors
+    </h1>
+    <p class="text-center text-gray-700 mb-8" style="font-family: 'Montserrat', sans-serif">
+      We are grateful to our sponsors for their generous support. Their contributions make MksU Hackfest 2024 possible.
+      </p>
 
-          <div class="flex justify-center items-center sm:flex-col md:flex-row lg:flex-row gap-5">
-
-            <div class="bg-white flex flex-col justify-center items-center rounded-lg shadow-md overflow-hidden " style="height:10rem">
-              <img src="assets/images/sponsors/gdsc.png" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 1" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  GDSC
-                </h5>
-              </div>
-            </div>
-
-            <!--<div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="assets/images/sponsors/icp.jpg" class="w-full" alt="Sponsor 2" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  ICP Innovators Club - MKSU
-                </h5>
-              </div>
-            </div>-->
-            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden " style="height:10rem;">
-              <img src="assets/images/sponsors/mksu.jpg" class="lazy_load"style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  Machakos University
-                </h5>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
-              style="height:10rem;">
-              <img src="assets/images/sponsors/ALX.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  ALX
-                </h5>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
-              style="height:10rem;">
-              <img src="assets/images/sponsors/Ajiry.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
-                alt="Sponsor 3" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  Ajiry
-                </h5>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
-              style="height:10rem;">
-              <img src="assets/images/sponsors/Microsoft.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
-                alt="Sponsor 3" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  Microsoft
-                </h5>
-              </div>
-            </div>
-            <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md  overflow-hidden "
-              style="height:10rem;">
-              <img src="assets/images/sponsors/TME.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem" alt="Sponsor 3" />
-              <div class="p-4">
-                <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
-                  TME Education
-                </h5>
-              </div>
-            </div>
-
-          </div>
+    <!-- Responsive Grid for Sponsors -->
+    <div class="sponsor-cor">
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center rounded-lg shadow-md overflow-hidden"
+        style="height:10rem">
+        <img src="assets/images/sponsors/gdsc.png" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 1" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            GDSC
+          </h5>
         </div>
-      
-        <section class="text-gray-700 py-16 min-h-screen z-1 lazy_load">
-          <div class="container flex flex-col justify-center p-4 mx-auto md:p-8">
-              <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl" style="font-family: 'Macondo', cursive">
-                Frequently Asked Questions</h2>
-              <div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
-                <details>
-                      <summary class="py-2 outline-none cursor-pointer focus:underline">What is MksU Hackfest 2.0?
-                      </summary>
-                      <div class="px-4 pb-4">
-                        <p>MksU Hackfest 2.0 is a collaborative event focused on "Sustainability in Engineering and
-                          Technology Solutions," organized by the Machakos University Tech and Engineering Community.
-                          It brings together students to develop innovative solutions for real-world sustainability
-                          challenges.</p>
-                      </div>
-                      </details>
-                      <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">Code of conduct</summary>
-                        <div class="px-4 pb-4">
-                          <p class="mt-2">
-                            <a href="https://drive.google.com/file/d/1u-qaV1yGGZY5Rp5n-LvmXFNxpXpN_wBU/view?usp=sharing" target="_blank"
-                              rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
-                              Read our full Code of Conduct here
-                            </a>
-                          </p>
-                        </div>
-                      </details>
-                      <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">Who can participate?</summary>
-                        <div class="px-4 pb-4">
-                          <p>The hackfest is open to all university students, regardless of their academic background. We
-                            encourage participation from diverse fields to promote cross-disciplinary innovation.</p>
-                        </div>
-                      </details>
-                      <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">Do I need to be a technical expert
-                          to participate?</summary>
-                        <div class="px-4 pb-4">
-                          <p>No! While technical skills are valuable, we welcome participants from all skill levels. Teams
-                            benefit from diverse perspectives, including design, business, and environmental expertise.
-                          </p>
-                        </div>
-                      </details>
-                      <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">What is the event format?
-                        </summary>
-                        <div class="px-4 pb-4">
-                          <p>The event includes:
-                          <ul>
-                            <li>Hands-on hackathon sessions</li>
-                            <li>Technical workshops</li>
-                            <li>Mentorship opportunities</li>
-                            <li>Industry expert presentations</li>
-                            <li>Networking sessions</li>
-                          </ul>
-                          </p>
-                        </div>
-                      </details>
-                      <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">Will there be mentorship
-                          available?</summary>
-                        <div class="px-4 pb-4">
-                          <p>Yes! Industry professionals and academic experts will be available throughout the event to
-                            guide teams and provide valuable insights.</p>
-                          </div>
-                          </details>
-                          <details>
-                        <summary class="py-2 outline-none cursor-pointer focus:underline">What kind of projects can we work
-                          on?</summary>
-                        <div class="px-4 pb-4">
-                          <p>Projects should address sustainability challenges through technology and engineering
-                            solutions. This could include:
-                          
-                          <ul>
-                            <li>Renewable energy applications</li>
-                            <li>Waste management solutions</li>
-                            <li>Smart resource management</li>
-                            <li>Sustainable agriculture tech</li>
-                            <li>Green transportation solutions</li>
-                          </ul>
-                          </p>
-                          </div>
-                          </details>
-                          <details>
-                          <summary class="py-2 outline-none cursor-pointer focus:underline">Can I participate as an
-                            individual?</summary>
-                          <div class="px-4 pb-4">
-                            <p>While we encourage team participation, individual registrations are welcome. We'll help match
-                              you with other participants to form balanced teams.</p>
-                            </div>
-                            </details>
-                            <details>
-                          <summary class="py-2 outline-none cursor-pointer focus:underline">What's the maximum team size?
-                          </summary>
-                          <div class="px-4 pb-4">
-                          <p>Teams can have up to 4 members. We recommend having members with diverse skill sets.</p>
-                          </div>
-                          </details>
-                          <details>
-                            <summary class="py-2 outline-none cursor-pointer focus:underline">What should I bring?</summary>
-                            <div class="px-4 pb-4">
-                              <p>
-                              <ul>
-                                <li>Your laptop and charger</li>
-                                <li>Student ID</li>
-                                <li>Any specific software or tools you prefer working with</li>
-                                <li>Enthusiasm and creative ideas</li>
-                              </ul>
-                              </p>
-                            </div>
-                          </details>
-                          <details>
-                            <summary class="py-2 outline-none cursor-pointer focus:underline">What resources will be provided?
-                            </summary>
-                            <div class="px-4 pb-4">
-                              <p>
-                              <ul>
-                                <li>Development tools and platforms</li>
-                                <li> Cloud credits (courtesy of our partners)</li>
-                                <li>Technical documentation</li>
-                                <li>Mentorship support</li>
-                                <li>Refreshments during the event</li>
-                              </ul>
-                              </p>
-                            </div>
-                          </details>
-                          <details>
-                          <summary class="py-2 outline-none cursor-pointer focus:underline">Is there any pre-event preparation
-                            required?</summary>
-                          <div class="px-4 pb-4">
-                          <p>We recommend:
-                          
-                          <ul>
-                            <li>Familiarizing yourself with basic sustainability concepts</li>
-                            <li> Reviewing provided learning resources (to be shared after registration)</li>
-                            <li>Installing common development tools</li>
-                            <li>Joining our pre-event orientation session</li>
-                          
-                          </ul>
-                          
-                          </p>
-                          </div>
-                          </details>
-                          <details>
-                      <summary class="py-2 outline-none cursor-pointer focus:underline">What are the judging criteria?
-                      </summary>
-                      <div class="px-4 pb-4">
-                          <p>Projects will be evaluated based on:
-                          
-                          <ul>
-                            <li>Innovation and creativity</li>
-                            <li> Sustainability impact</li>
-                            <li> Technical implementation</li>
-                            <li>Scalability and feasibility</li>
-                            <li>Presentation quality</li>
-                          </ul>
-                          </p>
-                          </div>
-                          </details>
-                          <details>
-                      <summary class="py-2 outline-none cursor-pointer focus:underline">Who are the organizing partners?
-                      </summary>
-                      <div class="px-4 pb-4">
-                          <p>The event is organized in collaboration with:
-                          <ul>
-                            <li>Machakos University</li>
-                            <li> Microsoft</li>
-                            <li> ALX</li>
-                            <li>GDSC</li>
-                          </ul>
-                          </p>
-                          </div>
-                          </details>
-                          </div>
-          </div>
-      </section>
+      </div>
 
-        <!-- Contact Section -->
-        <div class="container mx-auto px-4 py-12 bg-white lazy_load" id="contact">
-          <h1 class="text-3xl font-bold text-center mb-6" style="font-family: 'Macondo', cursive; color: #333">
-            Contact Us
-          </h1>
-        
-          <!-- Contact Form and Information -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center">
-        
-            <!-- Contact Form -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-md w-full">
-              <h2 class="text-2xl font-bold mb-4" style="font-family: 'Macondo', cursive; color: #333">
-                Get In Touch
-              </h2>
-              <form action="#" method="POST">
-                <div class="mb-4">
-                  <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
-                  <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
-                </div>
-                <div class="mb-4">
-                  <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
-                  <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
-                </div>
-                <div class="mb-4">
-                  <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
-                  <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300">
-                  Send Message
-                </button>
-              </form>
-            </div>
-        
-            <!-- Contact Information -->
-            <div class="text-gray-800 p-6 rounded-lg shadow-md bg-white">
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Our Location</h2>
-                <p class="mt-2" style="font-family: 'Montserrat', sans-serif">Machakos University, Machakos County, Kenya</p>
-              </div>
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Email Us</h2>
-                <p class="mt-2" style="font-family: 'Montserrat', sans-serif">
-                  <a href="mailto:info@hackfest.com" class="text-indigo-700 hover:text-blue-800">mksu.hackfest@gmail.com</a><br />
-                  <a href="mailto:support@hackfest.com" class="text-indigo-700 hover:text-blue-800">mksu.hackfest@mksu.ac.ke</a>
-                </p>
-              </div>
-              <div class="mb-6">
-                <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Follow Us</h2>
-                <div class="flex mt-2 space-x-4">
-                  <a href="https://twitter.com/mksu_hackfest" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://www.facebook.com/profile.php?id=61551504326973&mibextid=ZbWKwL" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300">
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/groups/12894196" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300">
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a href="https://instagram.com/mksu_hackfest" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                  <a href="https://youtube.com/@Mksu_Hackfest?si=a5scXlrULannsILM" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300">
-                    <i class="fab fa-youtube"></i>
-                  </a>
-                </div>
-              </div>
-              <!-- Download Button -->
-              <a href="assets/docs/MksU Hackfest 2024 Prospectus.pdf" download class="download-button">
-                <button class="d-anchor">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                    class="size-6 d-svg">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                  </svg>
-                  <p style="font-family: 'Macondo', cursive">
-                    Everything you need to know about MksU Hackfest!
-                  </p>
-                </button>
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md overflow-hidden"
+        style="height:10rem;">
+        <img src="assets/images/sponsors/mksu.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 2" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            Machakos University
+          </h5>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md overflow-hidden"
+        style="height:10rem;">
+        <img src="assets/images/sponsors/ALX.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 3" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            ALX
+          </h5>
+        </div>
+        </div>
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md overflow-hidden"
+        style="height:10rem;">
+        <img src="assets/images/sponsors/Ajiry.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 4" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            Ajiry
+          </h5>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md overflow-hidden"
+        style="height:10rem;">
+        <img src="assets/images/sponsors/Microsoft.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 5" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            Microsoft
+          </h5>
+        </div>
+        </div>
+      <div class="bg-white rounded-lg flex flex-col justify-center items-center shadow-md overflow-hidden"
+        style="height:10rem;">
+        <img src="assets/images/sponsors/TME.jpg" class="lazy_load" style="height:7rem;object-fit:cover;width:15rem"
+          alt="Sponsor 6" />
+        <div class="p-4">
+          <h5 class="text-xl font-bold text-gray-800 mb-2" style="font-family: 'Montserrat', sans-serif">
+            TME Education
+          </h5>
+        </div>
+        </div>
+
+    </div>
+    </div>
+
+
+  <section class="text-gray-700 py-16 min-h-screen z-1 lazy_load">
+    <div class="container flex flex-col justify-center p-4 mx-auto md:p-8">
+      <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl" style="font-family: 'Macondo', cursive">
+        Frequently Asked Questions</h2>
+      <div class="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What is MksU Hackfest 2.0?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>MksU Hackfest 2.0 is a collaborative event focused on "Sustainability in Engineering and
+              Technology Solutions," organized by the Machakos University Tech and Engineering Community.
+              It brings together students to develop innovative solutions for real-world sustainability
+              challenges.</p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Code of conduct</summary>
+          <div class="px-4 pb-4">
+            <p class="mt-2">
+              <a href="https://drive.google.com/file/d/1u-qaV1yGGZY5Rp5n-LvmXFNxpXpN_wBU/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">
+                Read our full Code of Conduct here
               </a>
-            </div>
-          </div>
-        </div>
-        
-
-        <!-- back to top button -->
-        <a id="back-button"></a>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-gray-200 py-6">
-          <div class="container mx-auto px-4 text-center">
-            <p class="text-sm" style="font-family: 'Montserrat', sans-serif">
-              &copy; 2024 MksU Hackfest. All rights reserved.
             </p>
           </div>
-        </footer>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Who can participate?</summary>
+          <div class="px-4 pb-4">
+            <p>The hackfest is open to all university students, regardless of their academic background. We
+              encourage participation from diverse fields to promote cross-disciplinary innovation.</p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Do I need to be a technical expert
+            to participate?</summary>
+          <div class="px-4 pb-4">
+            <p>No! While technical skills are valuable, we welcome participants from all skill levels. Teams
+              benefit from diverse perspectives, including design, business, and environmental expertise.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What is the event format?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>The event includes:
+            <ul>
+              <li>Hands-on hackathon sessions</li>
+              <li>Technical workshops</li>
+              <li>Mentorship opportunities</li>
+              <li>Industry expert presentations</li>
+              <li>Networking sessions</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Will there be mentorship
+            available?</summary>
+          <div class="px-4 pb-4">
+            <p>Yes! Industry professionals and academic experts will be available throughout the event to
+              guide teams and provide valuable insights.</p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What kind of projects can we work
+            on?</summary>
+          <div class="px-4 pb-4">
+            <p>Projects should address sustainability challenges through technology and engineering
+              solutions. This could include:
+  
+            <ul>
+              <li>Renewable energy applications</li>
+              <li>Waste management solutions</li>
+              <li>Smart resource management</li>
+              <li>Sustainable agriculture tech</li>
+              <li>Green transportation solutions</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Can I participate as an
+            individual?</summary>
+          <div class="px-4 pb-4">
+            <p>While we encourage team participation, individual registrations are welcome. We'll help match
+              you with other participants to form balanced teams.</p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What's the maximum team size?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>Teams can have up to 4 members. We recommend having members with diverse skill sets.</p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What should I bring?</summary>
+          <div class="px-4 pb-4">
+            <p>
+            <ul>
+              <li>Your laptop and charger</li>
+              <li>Student ID</li>
+              <li>Any specific software or tools you prefer working with</li>
+              <li>Enthusiasm and creative ideas</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What resources will be provided?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>
+            <ul>
+              <li>Development tools and platforms</li>
+              <li> Cloud credits (courtesy of our partners)</li>
+              <li>Technical documentation</li>
+              <li>Mentorship support</li>
+              <li>Refreshments during the event</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Is there any pre-event preparation
+            required?</summary>
+          <div class="px-4 pb-4">
+            <p>We recommend:
+  
+            <ul>
+              <li>Familiarizing yourself with basic sustainability concepts</li>
+              <li> Reviewing provided learning resources (to be shared after registration)</li>
+              <li>Installing common development tools</li>
+              <li>Joining our pre-event orientation session</li>
+  
+            </ul>
+  
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">What are the judging criteria?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>Projects will be evaluated based on:
+  
+            <ul>
+              <li>Innovation and creativity</li>
+              <li> Sustainability impact</li>
+              <li> Technical implementation</li>
+              <li>Scalability and feasibility</li>
+              <li>Presentation quality</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary class="py-2 outline-none cursor-pointer focus:underline">Who are the organizing partners?
+          </summary>
+          <div class="px-4 pb-4">
+            <p>The event is organized in collaboration with:
+            <ul>
+              <li>Machakos University</li>
+              <li> Microsoft</li>
+              <li> ALX</li>
+              <li>GDSC</li>
+            </ul>
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.0/instascan.min.js"></script>
-        <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-
-        <script src="assets/js/scripts.js"></script>
-        <script src="assets/js/dits.js"></script>
-        <script src="assets/js/navbar.js"></script>
-        <script src="assets/js/smooth.js"></script>
-        <script defer src="assets/js/main.js" type="module"></script>
-
-        <script>
-          function toggleAccordion(id) {
-            const content = document.getElementById('accordion' + id);
-            content.classList.toggle('hidden');
-          }
+  <!-- Contact Section -->
+  <div class="container mx-auto px-4 py-12 bg-white lazy_load" id="contact">
+    <h1 class="text-3xl font-bold text-center mb-6" style="font-family: 'Macondo', cursive; color: #333">
+      Contact Us
+    </h1>
+  
+    <!-- Contact Form and Information -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start justify-center">
+  
+      <!-- Contact Form -->
+      <div class="bg-gray-100 p-6 rounded-lg shadow-md w-full">
+        <h2 class="text-2xl font-bold mb-4" style="font-family: 'Macondo', cursive; color: #333">
+          Get In Touch
+        </h2>
+        <form action="#" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
+            <input type="text" id="name" name="name"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your name">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
+            <textarea id="message" name="message" rows="4"
+              class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your message"></textarea>
+            </div>
+          <button type="submit"
+            class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-700 transition duration-300">
+            Send Message
+          </button>
+          </form>
+          </div>
           
-          const lazyElements = document.querySelectorAll('.lazy_load');
+          <!-- Contact Information -->
+          <div class="text-gray-800 p-6 rounded-lg shadow-md bg-white">
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Our Location</h2>
+              <p class="mt-2" style="font-family: 'Montserrat', sans-serif">Machakos University, Machakos County, Kenya</p>
+            </div>
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Email Us</h2>
+              <p class="mt-2" style="font-family: 'Montserrat', sans-serif">
+                <a href="mailto:info@hackfest.com" class="text-indigo-700 hover:text-blue-800">mksu.hackfest@gmail.com</a><br />
+                <a href="mailto:support@hackfest.com" class="text-indigo-700 hover:text-blue-800">mksu.hackfest@mksu.ac.ke</a>
+              </p>
+            </div>
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold" style="font-family: 'Macondo', cursive">Follow Us</h2>
+              <div class="flex mt-2 space-x-4">
+            <a href="https://twitter.com/mksu_hackfest" target="_blank"
+              class="text-blue-500 hover:text-blue-700 transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61551504326973&mibextid=ZbWKwL" target="_blank"
+              class="text-blue-500 hover:text-blue-700 transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/groups/12894196" target="_blank"
+              class="text-blue-500 hover:text-blue-700 transition duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com/mksu_hackfest" target="_blank"
+              class="text-blue-500 hover:text-blue-700 transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@Mksu_Hackfest?si=a5scXlrULannsILM" target="_blank"
+              class="text-blue-500 hover:text-blue-700 transition duration-300">
+              <i class="fab fa-youtube"></i>
+            </a>
+            </div>
+            </div>
+            <!-- Download Button -->
+            <a href="assets/docs/MksU Hackfest 2024 Prospectus.pdf" download class="download-button">
+              <button class="d-anchor">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6 d-svg">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                <p style="font-family: 'Macondo', cursive">
+                  Everything you need to know about MksU Hackfest!
+                </p>
+              </button>
+            </a>
+            </div>
+            </div>
+            </div>
+
+
+  <!-- back to top button -->
+  <a id="back-button"></a>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm" style="font-family: 'Montserrat', sans-serif">
+        &copy; 2024 MksU Hackfest. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/instascan/1.0.0/instascan.min.js"></script>
+  <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/dits.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/smooth.js"></script>
+  <script defer src="assets/js/main.js" type="module"></script>
+
+  <script>
+    function toggleAccordion(id) {
+      const content = document.getElementById('accordion' + id);
+      content.classList.toggle('hidden');
+    }
+
+    const lazyElements = document.querySelectorAll('.lazy_load');
 
           function toggleAccordion(id) {
             const content = document.getElementById('accordion' + id);
             content.classList.toggle('hidden');
           }
 
-               const observer=new IntersectionObserver((entries,observer)=>{
-                  entries.forEach(entry=>{
-                    if(entry.isIntersecting){
-                      entry.target.classList.add('visible');
-                    }
-                      else{
-                        entry.target.classList.remove('visible');
-                      }
-                    }
-                  )
-                })
-              
-              lazyElements.forEach(element=>{
+              const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                  }
+                else {
+                  entry.target.classList.remove('visible');
+                }
+              }
+              )
+            })
+
+              lazyElements.forEach(element => {
                 observer.observe(element)
               })
-              const navCloseBtn=document.querySelector('#navbarClose')
-              const sideBar=document.querySelector('.sideBar')
-              sideBar.addEventListener('click',function(e){
-                   e.stopPropagation()
+              const navCloseBtn = document.querySelector('#navbarClose')
+              const sideBar = document.querySelector('.sideBar')
+              sideBar.addEventListener('click', function (e) {
+                e.stopPropagation()
               })
 
               document.getElementById("mobile-menu-button").addEventListener("click", function (e) {
                 sideBar.classList.add('showNavbar')
-              
-                });
-              navCloseBtn.addEventListener('click',function(e){
+
+              });
+              navCloseBtn.addEventListener('click', function (e) {
                 sideBar.classList.remove('showNavbar')
               })
 
-              
-
-        </script>
-
-        <script>
-          id = "luma-checkout"
-          src = "https://embed.lu.ma/checkout-button.js"
 
 
-          var btn = $("#back-button");
+</script>
 
-          $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-              btn.addClass("show");
-            } else {
-              btn.removeClass("show");
-            }
-          });
+  <script>
+    id = "luma-checkout"
+    src = "https://embed.lu.ma/checkout-button.js"
 
-          btn.on("click", function (e) {
-            e.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, "300");
-          });
-
-          var swiper = new Swiper(".mySwiperMembers", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            loop: true,
-            autoplay: {
-              delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: false, // Keep autoplay active after user interaction
-            },
-            pagination: {
-              el: ".members-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".members-next",
-              prevEl: ".members-prev",
-            },
-            breakpoints: {
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              // when window width is >= 480px
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            },
-          });
-
-          var swiper = new Swiper(".mySwiperLeads", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            loop: true,
-            autoplay: {
-              delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: false, // Keep autoplay active after user interaction
-            },
-            pagination: {
-              el: ".leads-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".leads-next",
-              prevEl: ".leads-prev",
-            },
-            breakpoints: {
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              // when window width is >= 480px
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            },
-          });
-        </script>
-</body>
-
-</html>
-      
-
-        <script>
-          id = "luma-checkout"
-          src = "https://embed.lu.ma/checkout-button.js"
-
-          document
-            .getElementById("mobile-menu-button")
-            .addEventListener("click", function (e) {
-              e.target.classList.add('showNavbar')
-            });
+              document
+                .getElementById("mobile-menu-button")
+                .addEventListener("click", function (e) {
+                  e.target.classList.add('showNavbar')
+                });
 
           var btn = $("#back-button");
 
@@ -1077,109 +1090,85 @@
               },
             },
           });
-        </script> -->
-</body>
+</script>
 
-</html>
-      
+  <script>
 
-        <script>
-          id = "luma-checkout"
-          src = "https://embed.lu.ma/checkout-button.js"
+              document.addEventListener('DOMContentLoaded', function () {
+                const track = document.querySelector('.carousel-track');
+                const slides = document.querySelectorAll('.carousel-slide');
+                const prevButton = document.querySelector('.carousel-button-prev');
+                const nextButton = document.querySelector('.carousel-button-next');
+                const dotsContainer = document.querySelector('.carousel-dots');
 
-          document
-            .getElementById("mobile-menu-button")
-            .addEventListener("click", function (e) {
-              e.target.classList.add('showNavbar')
-            });
+              let currentIndex = 0;
+              let slidesPerView = 3; // Default for desktop
 
-          var btn = $("#back-button");
-
-          $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-              btn.addClass("show");
+              // Update slides per view based on screen size
+              function updateSlidesPerView() {
+                if (window.innerWidth <= 640) {
+                  slidesPerView = 1;
+                } else if (window.innerWidth <= 1024) {
+                  slidesPerView = 2;
             } else {
-              btn.removeClass("show");
+                slidesPerView = 3;
             }
+              goToSlide(currentIndex);
+            }
+
+              // Create dots
+              const totalDots = Math.ceil(slides.length);
+              for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                dot.setAttribute('aria-label', `Go to slide group ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i * slidesPerView));
+                dotsContainer.appendChild(dot);
+              }
+
+              const dots = document.querySelectorAll('.dot');
+              updateDots();
+
+              function updateDots() {
+                const activeDotIndex = Math.floor(currentIndex / slidesPerView);
+                dots.forEach((dot, index) => {
+                  dot.classList.toggle('active', index === activeDotIndex);
+          });
+            }
+
+              function goToSlide(index) {
+                currentIndex = index;
+                const slideWidth = 100 / slidesPerView;
+                track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+                updateDots();
+              }
+
+              function nextSlide() {
+                const maxIndex = slides.length - slidesPerView;
+                currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + slidesPerView;
+                goToSlide(currentIndex);
+              }
+
+              function prevSlide() {
+                currentIndex = currentIndex <= 0 ? slides.length - slidesPerView : currentIndex - slidesPerView;
+                goToSlide(currentIndex);
+            }
+
+              // Event listeners
+              prevButton.addEventListener('click', prevSlide);
+              nextButton.addEventListener('click', nextSlide);
+              window.addEventListener('resize', updateSlidesPerView);
+
+              // Keyboard navigation
+              document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prevSlide();
+                if (e.key === 'ArrowRight') nextSlide();
           });
 
-          btn.on("click", function (e) {
-            e.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, "300");
-          });
-
-          var swiper = new Swiper(".mySwiperMembers", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            loop: true,
-            autoplay: {
-              delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: true, // Keep autoplay active after user interaction
-            },
-            pagination: {
-              el: ".members-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".members-next",
-              prevEl: ".members-prev",
-            },
-            breakpoints: {
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              // when window width is >= 480px
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            },
-          });
-
-          var swiper = new Swiper(".mySwiperLeads", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            slidesPerGroup: 1,
-            loop: true,
-            autoplay: {
-              delay: 2500, // Adjust the delay (in ms) as needed
-              disableOnInteraction: true, // Keep autoplay active after user interaction
-            },
-            pagination: {
-              el: ".leads-pagination",
-              clickable: true,
-            },
-            navigation: {
-              nextEl: ".leads-next",
-              prevEl: ".leads-prev",
-            },
-            breakpoints: {
-              // when window width is >= 320px
-              320: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
-              // when window width is >= 480px
-              480: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-            },
-          });
-        </script> -->
+              // Initial setup
+              updateSlidesPerView();
+            })
+            </script>
 </body>
 
 </html>

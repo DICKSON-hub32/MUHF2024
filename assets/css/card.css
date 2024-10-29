@@ -82,7 +82,7 @@ section .card .image img {
 }
 
 .name-profession .name {
-  font-size: 20px;
+  font-size: clamp(14px 16px 18px) ;
   font-weight: 600;
 }
 
