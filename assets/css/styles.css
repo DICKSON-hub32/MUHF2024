@@ -136,7 +136,7 @@ body {
 
   }
   .digit-container{
-    width: 75px; /* Reduce width for smaller screens */
+    width: 65px; /* Reduce width for smaller screens */
   }
 }
 .digit-container {
