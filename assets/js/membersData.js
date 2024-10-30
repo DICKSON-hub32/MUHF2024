@@ -158,7 +158,7 @@ export const members = [
     profession: "Logistics Team Member",
     src: "assets/images/team/VICTOR.jpeg",
     alt: "Victor Mutiso",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/victor-mutiso",
   },
 
   // Add more Team Members as needed
