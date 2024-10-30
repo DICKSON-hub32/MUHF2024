@@ -130,6 +130,11 @@ body {
   gap: 0.3rem;
 }
 
+@media(max-width:420px){
+  #countdown {
+    font-size: 1em;
+  }
+}
 .digit-container {
   display: flex;
   flex-direction: column;
