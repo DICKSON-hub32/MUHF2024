@@ -6,7 +6,7 @@ export const leads = [
     alt: "Dickson Esamai",
     facebook: "#",
     twitter: "#",
-    linkedin: "#",
+    linkedin: "linkedin.com/in/dicksonesamai95",
     github: "#",
   },
   {
