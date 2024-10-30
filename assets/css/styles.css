@@ -133,6 +133,10 @@ body {
 @media(max-width:420px){
   #countdown {
     font-size: 1em;
+
+  }
+  .digit-container{
+    width: 75px; /* Reduce width for smaller screens */
   }
 }
 .digit-container {
