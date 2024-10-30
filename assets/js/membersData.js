@@ -132,7 +132,7 @@ export const members = [
   {
     name: "Brian Kuria",
     profession: "Logistics Team Member",
-    src: "assets/images/team/MWANGI.jpg",
+    src: "assets/images/team/MWANGI.jpeg",
     alt: "Brian Kuria",
   },
   {
@@ -144,7 +144,7 @@ export const members = [
   {
     name: "Victor Mutiso",
     profession: "Logistics Team Member",
-    src: "assets/images/team/VICTOR.jpg",
+    src: "assets/images/team/VICTOR.jpeg",
     alt: "Victor Mutiso",
   },
 
