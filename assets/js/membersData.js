@@ -6,7 +6,7 @@ export const leads = [
     alt: "Dickson Esamai",
     facebook: "#",
     twitter: "#",
-    linkedin: "linkedin.com/in/dicksonesamai95",
+    linkedin: "https://www.linkedin.com/in/dicksonesamai95",
     github: "#",
   },
   {
@@ -16,7 +16,7 @@ export const leads = [
     alt: "Barbra Mwendwa",
     facebook: "#",
     twitter: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/barbramwendwa",
     github: "#",
   },
   {
@@ -26,7 +26,7 @@ export const leads = [
     alt: "Rose Njeri",
     facebook: "#",
     twitter: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/rose-njeri-njuguna",
     github: "#",
   },
   {
@@ -46,7 +46,7 @@ export const leads = [
     alt: "Evans Ngundi",
     facebook: "#",
     twitter: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/evan-ngundi",
     github: "#",
   },
 
@@ -79,18 +79,21 @@ export const members = [
     profession: "Marketing member",
     src: "assets/images/team/SALEM.png",
     alt: "Salem Lumumba",
+    linkedin: "#",
   },
   {
     name: "Brian Ndesa",
     profession: "R & D Member",
     src: "assets/images/team/albert.jpg",
     alt: "Albert",
+    linkedin: "https://www.linkedin.com/in/brian-ndesa-albert/",
   },
   {
     name: "Brian Ndesa",
     profession: "Operations Member",
     src: "assets/images/team/albert.jpg",
     alt: "Albert",
+    linkedin: "https://www.linkedin.com/in/brian-ndesa-albert/",
   },
 
   {
@@ -98,54 +101,64 @@ export const members = [
     profession: "R & D Team Member",
     src: "assets/images/team/erick.png",
     alt: "Eric Kaloki",
+    linkedin: "https://www.linkedin.com/in/eric-kaloki-447544321",
   },
   {
     name: "Stanely Mwaniki",
     profession: "Operations Member",
     src: "assets/images/team/Mwaniki.jpg",
     alt: "Frank",
+    linkedin: "#",
   },
   {
     name: "Anoid Mutunga",
     profession: "R & D Team Member",
     src: "assets/images/team/ANOID.png",
     alt: "Anoid Mutunga",
+    linkedin: "#",
   },
   {
     name: "Henry Kimani",
     profession: "R & D Team Member",
     src: "assets/images/team/HENRY.png",
     alt: "Henry Kimani",
+    linkedin: "https://www.linkedin.com/in/kimani-henry",
   },
   {
     name: "Augustine Mwai",
     profession: "Logistics Team Member",
     src: "assets/images/team/MWAI.jpg",
     alt: "Augustine Mwai",
+    linkedin: "#",
   },
   {
     name: "Brian Karanja",
     profession: "marketing member",
     src: "assets/images/team/BRIAN.jpg",
     alt: "Brian Karanja",
+    linkedin: "#",
   },
   {
     name: "Brian Kuria",
     profession: "Logistics Team Member",
     src: "assets/images/team/MWANGI.jpeg",
     alt: "Brian Kuria",
+    linkedin:
+      "https://www.linkedin.com/in/brian-mwangi-a493a12a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Peter Kinyua",
     profession: "Logistics Team Member",
     src: "assets/images/team/PETER.jpg",
     alt: "Peter Kinyua",
+    linkedin: "#",
   },
   {
     name: "Victor Mutiso",
     profession: "Logistics Team Member",
     src: "assets/images/team/VICTOR.jpeg",
     alt: "Victor Mutiso",
+    linkedin: "#",
   },
 
   // Add more Team Members as needed
