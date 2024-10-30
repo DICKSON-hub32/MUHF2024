@@ -14,14 +14,15 @@ function createCard(item, isLead = false) {
             ? `
         <div class="media-icons">
           
-          <i class="fa-brands fa-linkedin" href="${item.linkedin}"></i>
+          <a href="${item.linkedin}"><i class="fa-brands fa-linkedin"></i></a>
           
         </div>
         `
             : `
         <div class="media-icons">
           
-          <i class="fa-brands fa-linkedin" href="${item.linkedin}"></i>
+          <a href="${item.linkedin}"><i class="fa-brands fa-linkedin"></i></a>
+          
           
         </div>
         `
