@@ -128,20 +128,21 @@ body {
   display: flex;
   justify-content: center;
   gap: 0.3rem;
+  flex-wrap: wrap;
 }
 
 @media(max-width:420px){
   #countdown {
-    font-size: 1em;
-
+    font-size: 0.7em;
   }
   .digit-container{
-    width: 65px; /* Reduce width for smaller screens */
+    width: 60px; /* Reduce width for smaller screens */
   }
 }
 .digit-container {
   display: flex;
   flex-direction: column;
+  margin-top:5px;
   align-items: center;
   width: 100px; /* Ensure equal width */
   padding: 1rem;
