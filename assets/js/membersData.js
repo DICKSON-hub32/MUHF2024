@@ -89,11 +89,11 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/brian-ndesa-albert/",
   },
   {
-    name: "Brian Ndesa",
+    name: "Hillary Kiprotich",
     profession: "Operations Member",
-    src: "assets/images/team/albert.jpg",
+    src: "assets/images/team/Hillary.jpg",
     alt: "Albert",
-    linkedin: "https://www.linkedin.com/in/brian-ndesa-albert/",
+    linkedin: "https://www.linkedin.com/in/hillary-mutai-5107872bb/",
   },
 
   {
