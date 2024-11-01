@@ -108,7 +108,7 @@ export const members = [
     profession: "Operations Member",
     src: "assets/images/team/Mwaniki.jpg",
     alt: "Frank",
-    linkedin: "#",
+    linkedin: "linkedin.com/in/stanley-mutua-413a5b277",
   },
   {
     name: "Anoid Mutunga",
@@ -159,7 +159,6 @@ export const members = [
     src: "assets/images/team/VICTOR.jpeg",
     alt: "Victor Mutiso",
     linkedin: "https://www.linkedin.com/in/victor-muuo",
-  
   },
 
   // Add more Team Members as needed
